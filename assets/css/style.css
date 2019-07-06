@@ -1,0 +1,30 @@
+h1{
+    font-family: 'Calligraffitti', cursive;
+    color: black;
+    text-shadow: -1px -1px 0 antiquewhite, .15px -.15px 0 antiquewhite, -.15px .15px 0 antiquewhite, .15px .15px 0 antiquewhite;
+
+}
+h2{
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+    font-size: 60px;
+    color: hotpink;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+
+}
+h3{
+    font-family: 'Amatic SC', cursive;
+    text-shadow: -1px -1px 0 antiquewhite, .15px -.15px 0 antiquewhite, -.15px .15px 0 antiquewhite, .15px .15px 0 antiquewhite;
+    padding-left: 10px;
+}
+h4{
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    padding-left: 10px;
+
+}
+#playerPictures{
+    object-fit: contain;  
+}
