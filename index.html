@@ -11,89 +11,107 @@
 
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/javascript/game.jss">
 
 
 
     <title>Spaceballs</title>
 </head>
 
-<body style="background-image: url(assets/images/background.jpg); background-size: 100%;">
+<body style="background-image: url(assets/images/background.jpg); background-size: cover">
 
-    <div class="row" style="justify-content: center">
+    <div class="row d-flex-inline" style="justify-content: center;">
         <div class="card"
-            style="background-color: transparent; background-image: url(assets/images/spaceballsfont.png); background-size: cover; background-repeat: no-repeat;  padding-bottom: 10px; border: none">
-            <h2 style="padding-top: 120px; padding-left: 250px; ">The RPG Game!</h2>
+            style="background-color: transparent; background-image: url(assets/images/spaceballsfont.png); background-size: 100%; background-repeat: no-repeat;  padding-bottom: 10px; border: none">
+            <h2 style="padding-top: 140px; padding-left: 250px;  padding-bottom: 20px">The Point Collector!</h2>
         </div>
     </div>
 
 
 
-    <div class="row" style="justify-content: center">
-        <h4 class="card-text" id="pickYourPlayer" style="margin-top: 10px; margin-bottom: 10px;"> Pick Your Player</h4>
+    <div class="row justify-content-center" style="margin: 15px;">
 
-    </div>
-
-    <div class="row" style="justify-content: center">
-
-        <div class="card"
-            style=" height: 190px; width: 190px; background: transparent; border: 5px hotpink ridge; background-image: url(assets/images/darkhelmet.png);margin-left: 5px; ">
-            <div class="card-body" style="padding: 0px; margin:0px">
-                <h4 class="card-text" id="darkHelmet" style="padding-top: 70%"> Dark Helmet</h4>
-                <h3 class="card-text" id="darkHelmetHP" style="padding-top: 1%">hp goes here</h3>
-            </div>
+        <div class="card col-lg-3 col-sm-12" style=" background: white; border: 5px hotpink ridge; margin-left: 2px ">
+            <h4 class="card-text" style="margin-top: 10px; margin-bottom: 10px;"> Game Instructions</h4>
+            <p>You will be given a randm number at the start of the game.</p>
+            <br>
+            <p>There are four characters below. By clicking on a character you will add a random amount of points to
+                your score.</p>
+            <br>
+            <p>You win the game by matching you total score to the random number, you lose the game if your total score
+                goes above the random number.</p>
+            <br>
+            <p>The value of each character is hidden from you until you click on it.</p>
+            <br>
+            <p>Each time the game starts, the game will change the values of each character.</p>
         </div>
-        <div class="card; " id="barf"
-            style="height: 190px; width: 190px; background: transparent; border: 5px hotpink ridge; background-image: url(assets/images/barf.jpg); background-size: cover; margin-left: 5px;">
-            <div class="card-body" style="padding: 0px; margin:0px">
+
+
+
+        
+        
+        <div class="col-lg-2 col-sm-12">
+            <div class="card-body; " id="barf"
+                style="margin-top: 50px; background: transparent; border: 5px hotpink ridge; background-image: url(assets/images/barf.jpg); background-size: cover;height: 175px; width: 175px;">
                 <h4 class="card-text" style="padding-top: 70%"> Barf</h4>
-                <h3 class="card-text" id="barfHP" style="padding-top: 1%">hp goes here</h3>
             </div>
         </div>
-        <div class="card;" id="loneStar"
-            style="height: 190px; width: 190px; background: transparent; border: 5px hotpink ridge; background-image: url(assets/images/lonestar.jpeg); background-size: cover;margin-left: 5px; ">
-            <div class="card-body" style="padding: 0px; margin:0px">
+
+        <div class="col-lg-2 col-sm-12">
+            <div class="card-body;" id="loneStar"
+                style="margin-top: 50px; background: transparent; border: 5px hotpink ridge; background-image: url(assets/images/lonestar.jpeg); background-size: cover;height: 175px; width: 175px">
                 <h4 class="card-text" style="padding-top: 70%"> Lone Star</h4>
-                <h3 class="card-text" id="loneStarHP" sstyle="padding-top: 1%">hp goes here</h3>
             </div>
         </div>
-        <div class="card; " id="presidentSkroob"
-            style="height: 190px; width: 190px; background: transparent; border: 5px hotpink ridge; background: url(assets/images/presidentskroob.jpg); background-size: cover;margin-left: 5px ; ">
-            <div class="card-body" style="padding: 0px; margin:0px">
+
+        <div class="col-lg-2 col-sm-12">
+            <div class="card-body; " id="presidentSkroob"
+                style=" margin-top: 50px; background: transparent; border: 5px hotpink ridge; background: url(assets/images/presidentskroob.jpg); background-size: cover;height: 175px; width: 175px">
                 <h4 class="card-text" style="padding-top: 70%"> President Skroob</h4>
-                <h3 class="card-text" id="presidentSkroobHP" style="padding-top: 1%">hp goes here</h3>
             </div>
         </div>
-        <div class="card; " id="princessVespa"
-            style="height: 190px; width: 190px; background: transparent; border: 5px hotpink ridge; background-image: url(assets/images/princess.jpg); background-size: cover; margin-left: 5px; ">
-            <div class="card-body" style="padding: 0px; margin:0px">
+
+        <div class="col-lg-2 col-sm-12">
+            <div class="card-body; " id="princessVespa"
+                style="margin-top: 50px; background: transparent; border: 5px hotpink ridge; background-image: url(assets/images/princess.jpg); background-size: cover;height: 175px; width: 175px ">
                 <h4 class="card-text" style="padding-top: 70%"> Princess Vespa</h4>
-                <h3 class="card-text" id="princessVespaHP" style="padding-top: 1%">hp goes here</h3>
             </div>
         </div>
     </div>
 
-    <div class="row" style="justify-content: center">
-        <h4 class="card-text" id="enemiesAvailableToAttack" style="margin-top: 10px; margin-bottom: 10px; padding-left: 0px"> Enemies
-            Available To Attack</h4>
 
-    </div>
+    <br>
+    <div class="row" style="margin: 5px; margin-bottom: 30px">
+            <div class="col-sm-2 offset-lg-4" >
+              <div class="card" style="height: 150px">
+                <div class="card-body">
+                  <h5 class="card-title">Wins & Losses</h5>
+                  <p>Wins</p>
+                  <p id="wins"></p>
+                  <br>
+                  <p>Losses</p>
+                  <p id="losses"></p>
 
-    <div class="row" style="justify-content: center">
-        <button type="button" class="btn btn-danger" style="border: black 1px solid; margin-top: 10px; margin-bottom: 10px;">Attack</button>
-
-
-    </div>
-
-    <div class="row" style="justify-content: center;">
-        <h4 class="card-text" id="defender" style="margin-top: 10px; margin-bottom: 10px; padding-left: 0px">Defender</h4>
-
-    </div>
-
-    </div>
-
-
-
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="card" style="height: 150px">
+                      <div class="card-body">
+                        <h5 class="card-title">Target Score</h5>
+                        <p class="card-text" id="targetScore"> </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                        <div class="card" style="height: 150px">
+                          <div class="card-body">
+                            <h5 class="card-title">Current Score</h5>
+                            <p class="card-text" id="currentScore"></p>
+                          </div>
+                        </div>
+                      </div>
+            
+          </div>
 
 
 
@@ -114,6 +132,7 @@
 
 
     <script src="assets/javascript/game.js" defer></script>
+
 
 
 </body>

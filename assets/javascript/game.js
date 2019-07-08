@@ -1,23 +1,132 @@
-//create array of players
 
-//create variables for each character's attack power
 
-//create variables for each character's HP
+//character list
 
-//when i select my player, put all other characters into enemies row and change html from "pick your character" to "Your character"
+var characters = ["barf", "loneStar", "presidentSkroob", "princessVespa"];
 
-//when i click on an enemy, move that character into defender row
+//function for random number selection
+function randomIntFromInterval(min, max) // min and max included
+{
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
-//when  i click attack button, myplayer attacks enemy
+//character worth- randomly generated between 1 and 12
 
-//everytime i press attack, myPlayer gains attack power, taking more HP from enemies
+var barf = randomIntFromInterval(1, 12);
+var loneStar = randomIntFromInterval(1, 12);
+var presidentSkroob = randomIntFromInterval(1, 12);
+var princessVespa = randomIntFromInterval(1, 12);
 
-//screen tells me what damaged I caused to enemy and what damage enemy caused me
 
-//if myPlayer triumphs over enemy, then I pick new enemy to play. loop this
+//target score- randomly generated between 19 and 120
 
-//if myplayer HP gets to zero or below-- game over
-//lost? then disable attack button and show button to restart game
+var targetScore = randomIntFromInterval(19, 120);
 
-//if no more enemies to fight, then i win. 
-//if win, show win message and display button to restart game.
+var currentScore = 0;
+currentScore = document.getElementById("#currentScore");
+targetScore = document.getElementById("#targetScore");
+var wins = 0;
+var losses = 0;
+
+//write info to html
+$("currentScore").html(currentScore);
+$('#targetScore').html(targetScore);
+$('#wins').text(wins);
+$('#losses').text(losses);
+
+barf = randomIntFromInterval(1, 12);
+loneStar = randomIntFromInterval(1, 12);
+presidentSkroob = randomIntFromInterval(1, 12);
+princessVespa = randomIntFromInterval(1, 12);
+targetScore = randomIntFromInterval(19, 120);
+currentScore = 0;
+wins = 0;
+losses = 0;
+$("#currentScore").text(currentScore);
+$("#targetScore").text(targetScore);
+
+
+/*  I went down a bad rabbit hole here
+document.getElementById('#barf').innerHTML = barf;
+document.getElementById('#loneStar').innerHTML = loneStar;
+document.getElementById('#presidentSkroob').innerHTML = presidentSkroob;
+document.getElementById('#princessVespa').innerHTML = princessVespa;
+document.getElementById('#targetScore').innerHTML = targetScore;
+document.getElementById('#currentScore').innerHTML = currentScore;
+*/
+
+//reset game function
+function reset() {
+    barf = randomIntFromInterval(1, 12);
+    loneStar = randomIntFromInterval(1, 12);
+    presidentSkroob = randomIntFromInterval(1, 12);
+    princessVespa = randomIntFromInterval(1, 12);
+    targetScore = randomIntFromInterval(19, 120);
+    currentScore = 0;
+    $("#currentScore").text(currentScore);
+    $("#targetScore").text(targetScore);
+
+}
+
+
+//add wins to total wins
+function youWin() {
+    alert("You won!");
+    wins++;
+    $('#wins').text(wins);
+    reset();
+}
+//addes the losses to the userTotal
+function youLose() {
+    alert("You lose!");
+    losses++;
+    $('#losses').text(losses);
+    reset()
+}
+
+//click on characters
+$('#barf').on('click', function () {
+    currentScore = currentScore + barf;
+    $('#currentScore').text(currentScore);
+    //win or lose
+    if (currentScore == targetScore) {
+        youWin();
+    }
+    else if (currentScore > targetScore) {
+        youLose();
+    }
+})
+$('#loneStar').on('click', function () {
+    currentScore = currentScore + loneStar;
+    $('#currentScore').text(currentScore);
+    //win or lose
+    if (currentScore == targetScore) {
+        youWin();
+    }
+    else if (currentScore > targetScore) {
+        youLose();
+    }
+})
+$('#princessVespa').on('click', function () {
+    currentScore = currentScore + princessVespa;
+    $('#currentScore').text(currentScore);
+    //win or lose
+    if (currentScore == targetScore) {
+        youWin();
+    }
+    else if (currentScore > targetScore) {
+        youLose();
+    }
+})
+$('#presidentSkroob').on('click', function () {
+    currentScore = currentScore + presidentSkroob;
+    $('#currentScore').text(currentScore);
+    //win or lose
+    if (currentScore == targetScore) {
+        youWin();
+    }
+    else if (currentScore > targetScore) {
+        youLose();
+    }
+})
+
